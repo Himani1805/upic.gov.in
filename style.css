@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: small;
+}
+#root{
+    width: 96%;
+    margin: auto;
+    border: 1px solid #bbb;
+}
+#header{
+    display: flex;
+    font-size:smaller;
+    border: 1px solid #bbb;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 3%;
+    box-sizing: border-box;
+    color: gray;
+}
+#header div{
+    font-size: 12px;
+}
+.bgImg{
+    width: 40%;
+    padding: 5px 0px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-image: url("https://upic.gov.in/images/flag.jpg"); 
+    background-size: cover;
+}
+#headerRight{
+    color: gray;
+
+}
+
+#headerBanner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#bannerLeft{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+#header a{
+    text-decoration: none;
+    color: gray;
+    font-size: 12px;
+
+}
+#header a:hover{
+    text-decoration: underline;
+}
+#navBar a{
+    text-decoration: none;
+    color: black;
+}
+#searchBar{
+    font-size: 11px;
+
+}
+#bt1{
+    background-color: rgb(241, 241, 6);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#bt1:hover{
+    background-color: #E6E6E6;
+}
+#bt2{
+    background-color: #2192CA;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;    
+}
+#bt2:hover{
+    background-color: #5CBC42;
+}
+#span{
+    color: #115d82;
+    font-size: xx-large;
+    font-weight: lighter;
+    text-align: left;
+}
+#navBar{
+    background-color: #1B76A3;
+    display: flex;
+    padding: 20px;
+    justify-content:left;
+    align-items: center;
+    gap: 30px;
+}
+#navBar li {
+    list-style-type: none;
+
+}
+#navBar a{
+    color: white;
+
+}
+#main{
+    display: flex;
+    margin: 5px;
+
+}
+#leftSide{
+    width: 12%;
+    background-color: #DBF0FB;
+    line-height: 30px;
+    padding: 25px;
+    border: 1px solid #3a8bb4;
+
+}
+#leftSide div li{
+    border-bottom: 1px dotted gray;
+}
+
+#leftSide li a{
+    color: black;
+    text-decoration: none;
+}
+#leftSide li a:hover{
+    color: #2192CA;
+}
+#leftSide div  a {
+    color: black;
+    text-decoration: none;
+
+}
+#border{
+    border-top:5px solid #115d82;
+
+}
+#span1{
+    font-size: 15px;
+    font-weight: bold;
+    display: inline;
+    text-align: left;
+    /* background-color: #CAE8F8; */
+}
+/* #border p{
+    background-color: #ECF7FD;
+    border: 2px dotted gray;
+} */
+#midSection{
+    width: 70%;
+    /* margin: 2px; */
+    margin-left: 5px;
+    border: 1px solid gray;
+
+}
+#scroll{
+    width: 100%;
+
+}
+#clickHere{
+    text-align: center;
+    background-color: #EBEBEB;
+    padding: 10px;
+    border-top: 5px solid #1376cd;
+
+
+}
+#clickHere h2 a{
+    color: black;
+    text-decoration: none;
+    font-size:medium;
+
+
+}
+.textImg{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #EBEBEB;
+    padding: 3px;
+    gap: 5px;
+
+
+}
+
+#scicHead{
+    text-align: center;
+    padding: 20px;
+    background-image: url("https://upic.gov.in/images/up.gif");
+
+}
+#scicHead h6 a{
+    text-decoration: none;
+    color: black;
+}
+#sicDetails{
+    margin: 15px;
+    padding: 50px;
+
+}
+#sic{
+    text-align: center;
+    padding: 10px;
+}
+#sicTen{
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-content: center;
+    /* object-fit: cover; */
+
+}
+#sicTen div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+}
+#sicTen div p a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+
+}
+#impUpic{
+    padding: 2px;
+    border-top: 5px solid #1376cd;
+    height: 200px;
+    background-color: #E4E4E4;
+
+}
+#rightSide{
+    width: 18%;
+    padding: 2px;
+    line-height: 30px;
+    
+
+
+}
+.blue{
+    color: white;
+    background-color: #115d82;
+    margin: 0px 0px 6px 6px;
+    padding: 6px 20px;
+
+}
+.blue:hover{
+    color: black;
+    background-color: rgb(235, 227, 13);
+
+}
+
+.green{
+    color: white;
+    background-color: green;
+    margin: 0px 0px 6px 6px;
+    padding: 6px 20px;
+
+
+
+}
+.green:hover{
+    color: white;
+    background-color: rgb(235, 227, 13);
+
+
+}
+#img1{
+    margin: 6px;
+    padding: 2px;
+    border: 1px solid gray;
+
+
+}
+#img2{
+    margin: 6px;
+    padding: 2px;
+    border: 1px solid gray;
+
+}
+
+#govtLink{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#footer{
+    display: flex;
+    height: 150px;
+    color: white;
+    background-color: #07457C;
+    background-image: url("https://upic.gov.in/images/bg1.gif");
+    padding: 20px;
+    justify-content: space-around;
+    line-height: 30px;
+    font-size: 4px;
+
+}
