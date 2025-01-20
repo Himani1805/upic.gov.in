@@ -1,0 +1,87 @@
+/* Default styles are applied to all devices */
+
+/*For Laptop and Desktop screens (width >= 769 */
+@media (min-width: 769){
+    #header, #navBar, #footer {
+        flex-direction: column; 
+        align-items: center; 
+    } 
+    #header div {
+        font-size: 10px; 
+    }
+
+    #navBar {
+        gap: 10px; 
+        padding: 10px;
+    }
+
+    #leftSide {
+        display: none; 
+    }
+
+    #midSection {
+        width: 100%; 
+    }
+
+    #rightSide {
+        display: none; 
+    }
+
+    #scroll img {
+        width: 100%; 
+    }  
+}
+
+
+/* For tablets and smaller screens (width <= 768px) */
+@media (max-width: 768px) {
+    #header, #navBar, #footer {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    #header div {
+        font-size: 10px; 
+    }
+
+    #navBar {
+        gap: 10px; 
+        padding: 10px;
+    }
+
+    #leftSide {
+        display: none; 
+    }
+
+    #midSection {
+        width: 100%; 
+    }
+
+    #rightSide {
+        display: none; 
+    }
+
+    #scroll img {
+        width: 100%; 
+    }
+}
+
+/* For mobile devices (width <= 480px) */
+@media (max-width: 480px) {
+    #header {
+        font-size: 10px; 
+    }
+
+    #header a {
+        font-size: 8px;
+    }
+
+    #navBar li {
+        font-size: 8px;
+    }
+
+    #footer {
+        font-size: 8px; 
+        text-align: center;
+    }
+}
