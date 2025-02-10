@@ -6,7 +6,7 @@
     #header {
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        padding: 5px;
         text-align: center;
 
     }
@@ -25,8 +25,8 @@
     #navBar {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        padding: 10px;
+        gap: 5px;
+        padding: 5px;
         text-align: center;
 
     }
@@ -38,7 +38,16 @@
         align-items: center;
 
     }
-    #leftSide, #midSection, #rightSide {
+    #leftSide,
+    #rightSide {
+        width: 100%;
+        padding: 5px;
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+
+    }
+    #midSection {
         width: 100%;
         padding: 10px;
         text-align: center;
@@ -61,13 +70,28 @@
         align-items: center;
         text-align: center;
         gap: 5px;
-
     }
     #govtLink img {
-        width: 50px;
-        height: auto;
+        width: 30px;
+        /* height: auto; */
+    }
+    #impUpic{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .blue, .green {
+        padding: 8px 15px;
+        font-size: 14px;
     }
 
+    #footer {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
 
 }
 
@@ -102,13 +126,30 @@
         align-items: center;
 
     }
-    #leftSide, #midSection, #rightSide {
+    #midSection {
         width: 100%;
+        margin: 0;
         padding: 15px;
         text-align: center;
         box-sizing: border-box;
 
     }
+    /* .bgImg {
+        width: 100%;
+    }
+     */
+    
+    #leftSide,
+    #rightSide {
+        width: 90%;
+        padding: 10px;
+        text-align: center;
+        padding: 15px;
+        text-align: center;
+        box-sizing: border-box;
+
+    }
+    
     #sicTen {
         gap: 15px;
         flex-wrap: wrap;

@@ -116,10 +116,10 @@
 #main{
     display: flex;
     margin: 5px;
-
 }
 #leftSide{
     width: 12%;
+    height:100%;
     background-color: #DBF0FB;
     line-height: 30px;
     padding: 25px;
@@ -159,6 +159,7 @@
 } */
 #midSection{
     width: 70%;
+    height:1200px;
     margin-left: 5px;
 }
 .borderLine{
@@ -273,12 +274,73 @@
 
 }
 #impUpic{
-    padding: 2px;
+    width: 100%;
     border-top: 5px solid #1376cd;
     background-color: #E4E4E4;
-    margin-bottom: 200px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
 
 }
+.notification_Control{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+}
+.notification_Control div{
+    display: flex;
+    gap: 20px;
+    /* justify-content: space-between; */
+    text-align: center;
+}
+
+.notification {
+    max-width: 100%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    overflow:hidden;
+    height: 200px; 
+    position: relative;
+    /* border:1px solid #ddd; */
+
+}
+h2 {
+    text-align: center;
+}
+.scroll-wrapper {
+    height: 225px;
+    overflow: hidden;
+    position: relative;
+    animation: scrollUp 5s linear infinite;
+}
+.scroll-content {
+    display: flex;
+    flex-direction: column;
+    animation: scrollUp 10s linear infinite;
+}
+.notice {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.notice:last-child {
+    border-bottom: none;
+}
+.date {
+    color: gray;
+    font-size: 14px;
+}
+.download {
+    color: blue;
+    text-decoration: none;
+}
+@keyframes scrollUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
 #rightSide{
     width: 18%;
     padding: 2px;
@@ -320,8 +382,8 @@
 
 #govtLink{
     display: flex;
+    padding-top: 30px;
     justify-content: space-evenly;
-
 }
 #footer{
     display: flex;
@@ -336,47 +398,4 @@
 
 }
 
-.impUpic {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 20px;
-    background-color: #f8f8f8;
-}
-.container {
-    max-width: 100%;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    overflow:hidden;
-    height: 200px; 
-    /* position: relative; */
-}
-h2 {
-    text-align: center;
-}
-.scroll-wrapper {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    animation: scrollUp 15s linear infinite;
-}
-.notice {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-.notice:last-child {
-    border-bottom: none;
-}
-.date {
-    color: gray;
-    font-size: 14px;
-}
-.download {
-    color: blue;
-    text-decoration: none;
-}
-@keyframes scrollUp {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-50%); }
-}
 
