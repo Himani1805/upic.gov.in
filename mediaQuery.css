@@ -1,87 +1,230 @@
-/* Default styles are applied to all devices */
-
-/*For Laptop and Desktop screens (width >= 769 */
-@media (min-width: 769){
-    #header, #navBar, #footer {
-        flex-direction: column; 
-        align-items: center; 
-    } 
-    #header div {
-        font-size: 10px; 
+/* Extra Small Devices (Phones) */
+@media only screen and (max-width: 480px) {
+    #root {
+        width: 100%;
     }
-
-    #navBar {
-        gap: 10px; 
-        padding: 10px;
-    }
-
-    #leftSide {
-        display: none; 
-    }
-
-    #midSection {
-        width: 100%; 
-    }
-
-    #rightSide {
-        display: none; 
-    }
-
-    #scroll img {
-        width: 100%; 
-    }  
-}
-
-
-/* For tablets and smaller screens (width <= 768px) */
-@media (max-width: 768px) {
-    #header, #navBar, #footer {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    #header div {
-        font-size: 10px; 
-    }
-
-    #navBar {
-        gap: 10px; 
-        padding: 10px;
-    }
-
-    #leftSide {
-        display: none; 
-    }
-
-    #midSection {
-        width: 100%; 
-    }
-
-    #rightSide {
-        display: none; 
-    }
-
-    #scroll img {
-        width: 100%; 
-    }
-}
-
-/* For mobile devices (width <= 480px) */
-@media (max-width: 480px) {
     #header {
-        font-size: 10px; 
-    }
-
-    #header a {
-        font-size: 8px;
-    }
-
-    #navBar li {
-        font-size: 8px;
-    }
-
-    #footer {
-        font-size: 8px; 
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
         text-align: center;
+
+    }
+    .bgImg {
+        width: 100%;
+        background-size: contain;
+        justify-content: center;
+
+    }
+    #headerBanner, #bannerLeft {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+
+    }
+    #navBar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        text-align: center;
+
+    }
+    #navBar a:hover{
+        background-color: skyblue;
+    }
+    #main {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    #leftSide, #midSection, #rightSide {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    #footer {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 10px;
+
+    }
+    #scroll {
+        width: 100%;
+        overflow-x: scroll; 
+        white-space: nowrap;
+    }
+    #govtLink {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+
+    }
+    #govtLink img {
+        width: 50px;
+        height: auto;
+    }
+
+
+}
+
+/* Small Devices (Tablets) */
+@media only screen and (max-width: 768px) {
+    #root {
+        width: 98%;
+    }
+    #header {
+        padding: 10px 2%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .bgImg {
+        width: 100%;
+        background-size: contain;
+        justify-content: center;
+
+    }
+    #navBar {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        padding: 10px;
+    }
+    #main {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    #leftSide, #midSection, #rightSide {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        box-sizing: border-box;
+
+    }
+    #sicTen {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+
+    }
+    #scroll {
+        width: 100%;
+        overflow-x: auto; 
+        white-space: nowrap;
+    }
+    #govtLink {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+    #govtLink img {
+        width: 60px;
+        height: auto;
+    }
+    .footer_img img{
+        width: fit-content;
+    }
+
+}
+
+/* Medium Devices (Laptops) */
+@media only screen and (max-width: 1024px) {
+    #root {
+        width: 96%;
+    }
+    #header {
+        padding: 10px 2%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .bgImg {
+        width: 100%;
+        background-size: contain;
+        justify-content: center;
+    }
+    #navBar {
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        padding: 10px;
+        justify-content: flex-start;
+    }
+    #main {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
+    #leftSide, #midSection, #rightSide {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    #sicTen {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    #scroll {
+        width: 100%;
+        overflow-x: auto; 
+        white-space: nowrap;
+    }
+    #govtLink {
+        gap: 10px;
+        text-align: center;
+        gap: 20px;
+    }
+    #govtLink img {
+        width: 100px;
+        height: auto;
+    }
+    .footer_img img{
+        width: 50px;
+    }
+} 
+
+
+/* Large Devices (Desktops) */
+@media only screen and (min-width: 1025px) {
+    #root {
+        width: 96%;
+    }
+    #navBar {
+        justify-content: flex-start;
+    }
+    #main {
+        display: flex;
+    }
+    #scroll {
+        width: 100%;
+        overflow: hidden;
+    }
+    #govtLink {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+    }
+    #govtLink img {
+        /* width: 140px; */
+        height: auto;
     }
 }

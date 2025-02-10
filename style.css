@@ -7,18 +7,20 @@
 #root{
     width: 96%;
     margin: auto;
-    border: 1px solid #bbb;
+    border: 1px solid #ccc;
 }
 #header{
     display: flex;
     font-size:smaller;
-    border: 1px solid #bbb;
+    border-bottom: 1px solid #ccc;
     justify-content:space-between;
     align-items: center;
     width: 100%;
     padding: 0px 3%;
     box-sizing: border-box;
     color: gray;
+    margin-bottom: 10px;
+
 }
 #header div{
     font-size: 12px;
@@ -105,6 +107,12 @@
     color: white;
 
 }
+#Gallery{
+    background-color: #1B76A3;
+    color: white;
+    border: none;
+    width: 70px;
+}
 #main{
     display: flex;
     margin: 5px;
@@ -151,28 +159,24 @@
 } */
 #midSection{
     width: 70%;
-    /* margin: 2px; */
     margin-left: 5px;
-    border: 1px solid gray;
-
+}
+.borderLine{
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
 }
 #scroll{
     width: 100%;
-
 }
 #clickHere{
     text-align: center;
     background-color: #EBEBEB;
     padding: 10px;
     border-top: 5px solid #1376cd;
-
-
 }
 #clickHere h2 a{
     color: black;
-    text-decoration: none;
     font-size:medium;
-
 
 }
 .textImg{
@@ -183,20 +187,45 @@
     padding: 3px;
     gap: 5px;
 }
-.fontSize h1{
-    font-size:34px;
+.textImg h1 a{
+    text-decoration-line: none;
 }
-.fontSize a
 
-#scicHead{
-    text-align: center;
-    padding: 20px;
+.textImg h2 a{
+    text-decoration-line: none;
+}
+.textImg h1 a:hover{
+    text-decoration-line: underline;
+}
+
+
+.textImg h2 a:hover{
+    text-decoration-line: underline;
+}
+.size a{
+    font-size: 1.9rem;
+    color: black;   
+}
+.newLogo img{
+    text-align:center;
+}
+#container{
     background-image: url("https://upic.gov.in/images/up.gif");
 
+}
+#scicHead{
+    text-align: center;
+    padding: 10px;
+
+}
+#sciHead h6:hover{
+    text-decoration: underline;
 }
 #scicHead h6 a{
     text-decoration: none;
     color: black;
+    color: gray;
+
 }
 #sicDetails{
     margin: 15px;
@@ -207,22 +236,34 @@
     text-align: center;
     padding: 10px;
 }
+#scicHead img{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
 #sicTen{
     display: flex;
     padding: 15px;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: center;
+    justify-content:space-around;
     align-content: center;
     /* object-fit: cover; */
 
 }
 #sicTen div{
+    width: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 8px;
+    text-align: center;
+}
+#sicTen div img{
+    border-radius: 50%;
+}
+#sicTen div:hover{
+    text-decoration: underline;
 }
 #sicTen div p a{
     text-decoration: none;
@@ -234,17 +275,14 @@
 #impUpic{
     padding: 2px;
     border-top: 5px solid #1376cd;
-    height: 200px;
     background-color: #E4E4E4;
+    margin-bottom: 200px;
 
 }
 #rightSide{
     width: 18%;
     padding: 2px;
     line-height: 30px;
-    
-
-
 }
 .blue{
     color: white;
@@ -274,18 +312,10 @@
 
 
 }
-#img1{
-    margin: 6px;
+#img1 img, #img2 img{
+    width: 100%;
     padding: 2px;
-    border: 1px solid gray;
-
-
-}
-#img2{
-    margin: 6px;
-    padding: 2px;
-    border: 1px solid gray;
-
+    border: 1px solid #ccc;
 }
 
 #govtLink{
@@ -304,5 +334,49 @@
     line-height: 30px;
     font-size: 4px;
 
+}
+
+.impUpic {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+.container {
+    max-width: 100%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    overflow:hidden;
+    height: 200px; 
+    /* position: relative; */
+}
+h2 {
+    text-align: center;
+}
+.scroll-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: scrollUp 15s linear infinite;
+}
+.notice {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.notice:last-child {
+    border-bottom: none;
+}
+.date {
+    color: gray;
+    font-size: 14px;
+}
+.download {
+    color: blue;
+    text-decoration: none;
+}
+@keyframes scrollUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
 }
 

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQuery.css">
 </head>
-
 <body>
-    <div id="header">
+    <!-- Header Section -->
+    <header id="header">
         <div class="bgImg">
             <img src="https://upic.gov.in/images/clock-icon.gif" alt="" width="20">
             <div id="datetime"></div>
@@ -18,10 +18,13 @@
             <a href="#">Skip to Main content | Feedback | Sitemap | </a>
             <input id="searchBar" type="text" placeholder="Enter Search Keyword">
             <button id="bt1">Go</button>
-            <button id="bt2" onclick="Hindi">Hindi</button>
+            <button id="bt2" onclick="changeLanguageToHindi()">Hindi</button>
         </div>
-    </div>
-    <div id="root">
+    </header>    
+    
+    <!-- Main Container -->
+    <div id="root">        
+        <!-- Banner Section -->
         <div id="headerBanner">
             <div id="bannerLeft">
                 <span><img
@@ -32,7 +35,9 @@
             <div id="bannerRight">
                 <img src="https://upic.gov.in/images/logo2_English.png" alt="" width="120">
             </div>
-        </div>
+        </div>  
+
+        <!-- Navigation Bar -->
         <div id="navBar">
             <li><a href="Home">Home</a></li>
             <li><a href="Right to Information Act">Right to Information Act</a></li>
@@ -40,10 +45,20 @@
             <li><a href="Press Relaese & Media Reports ">Press Release & Media Reports</a></li>
             <li><a href="Major Events">Major Events</a></li>
             <li><a href="Annual Reports">Annual Reports</a></li>
-            <li><a href="Gallery">Gallery</a></li>
+            <!-- <li><a href="Gallery"></a>
+            </li>                 -->
+            <select id="Gallery">
+                <option value="gallery">Gallery</option>
+                <option value="photo_gallery">Photo Gallery</option>
+                <option value="video_gallery">Video Gallery</option>
+            </select>
+
             <li><a href="Contact Us">Contact Us</a></li>
         </div>
+
+        <!-- Main Content Section -->
         <div id="main">
+            <!-- Left side Content Section -->
             <div id="leftSide">
                 <div>
                     <h3>About Us</h3>
@@ -91,7 +106,10 @@
                         Chief Secretary, U.P. and order issued by Goverment of U.P.</p>
                 </div>
             </div>
-            <div id="midSection">
+
+            <!-- Mid Content Section -->
+            <div id="midSection">                
+                <!-- Image Slider -->
                 <div id="scroll">
                     <img class="mySlides" src="https://upic.gov.in/MediaGallery/1.jpg" alt="" width="800" />
                     <img class="mySlides" src="https://upic.gov.in/MediaGallery/Golden_Hour.jpg" alt="" width="800">
@@ -99,87 +117,95 @@
                     <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                     <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
                 </div>
-                <div id="clickHere">
-                    <div class="textImg">
-                        <h1 class="fontSize"><a href="#">E-filing of New Second Appeal and Complaint.  </a></h1>
-                        <img src="https://upic.gov.in/images/new_red.gif" alt="" width="30">
+                <div class="borderLine">
+                    <div id="clickHere">
+                        <div class="textImg newLogo">
+                            <h1 class="size"><a href="#">E-filing of New Second Appeal and Complaint.  </a></h1>
+                            <img src="https://upic.gov.in/images/new_red.gif" alt="" width="30" height="18">
+                        </div>
+                        <div class="textImg">
+                            <h2><a href="#">Office Order for new second appeal and complaint </a></h2>
+                            <img src="https://upic.gov.in/images/new_red.gif" alt="" width="30">
+                        </div>
+                        <div class="textImg">
+                            <h2><a
+                                    href="Regarding old Second Appeal, Complaint and other documents visit go to the old link(https://upic.gov.in/),">Regarding Official E.mail.</a></h2>
+                            <img src="https://upic.gov.in/images/new_red.gif" alt="" width="30">
+                        </div>
+                        <div class="textImg">
+                            <h2><a href="Regarding Official E.mail.">Hearing Changes of the All Court </a></h2>
+                            <img src="https://upic.gov.in/images/new_red.gif" alt="" width="30">
+                        </div>
+                        <div class="textImg">
+                            <h2><a href="Hearing Changes of the All Court">Internship Information </a></h2>
+                            <img src="https://upic.gov.in/images/new_red.gif" alt="" width="30">
+                        </div>
+                        <div class="textImg">
+                            <h2><a href="Schedule of work of the Commision's hearing rooms">Schedule of work of the Commission's hearing rooms </a></h2>
+                            <img src="https://upic.gov.in/images/new_red.gif" alt="" width="30">
+                        </div>
+                        <div>
+                        </div>
                     </div>
-                    <div class="textImg">
-                        <h2><a href="#">Office Order for new second appeal and complaint </a></h2>
-                        <img src="https://upic.gov.in/images/new_red.gif" alt="" width="30">
-                    </div>
-                    <div class="textImg">
-                        <h2><a
-                                href="Regarding old Second Appeal, Complaint and other documents visit go to the old link(https://upic.gov.in/),">Regarding Official E.mail.</a></h2>
-                        <img src="https://upic.gov.in/images/new_red.gif" alt="" width="30">
-                    </div>
-                    <div class="textImg">
-                        <h2><a href="Regarding Official E.mail.">Hearing Changes of the All Court </a></h2>
-                        <img src="https://upic.gov.in/images/new_red.gif" alt="" width="30">
-                    </div>
-                    <div class="textImg">
-                        <h2><a href="Hearing Changes of the All Court">Internship Information </a></h2>
-                        <img src="https://upic.gov.in/images/new_red.gif" alt="" width="30">
-                    </div>
-                    <div class="textImg">
-                        <h2><a href="Schedule of work of the Commision's hearing rooms">Schedule of work of the Commission's hearing rooms </a></h2>
-                        <img src="https://upic.gov.in/images/new_red.gif" alt="" width="30">
-                    </div>
-                    <div>
+                    <div id="container">
+                        <!-- State Chief Information Commissioner -->
+                        <div id="scicHead">
+                            <h4>State Chief Information Commissioner</h4><br>
+                            <img src="https://upic.gov.in/MediaGallery/s12024.JPG" alt="" width="100"><br><br>
+                            <h6><a href="https://upic.gov.in/MediaGallery/s12024.JPG">Shri Rajkumar Vishwakarma</a></h6>
+                        </div>
+                        <!-- State Information Commissioner -->
+                        <div id="sicDetail">
+                            <div id="sic">
+                                <h5>State Information Commissioner</h5>
+                            </div>
+                            <div id="sicTen">
+                                <div>
+                                    <img src="https://upic.gov.in/MediaGallery/s22024.JPG" alt="" width="70">
+                                    <p><a href="https://upic.gov.in/MediaGallery/s22024.JPG">Shree Sudhir Kumar Singh</a></p>
+                                </div>
+                                <div>
+                                    <img src="https://upic.gov.in/MediaGallery/s32024.JPG" alt="" width="70">
+                                    <p><a href="https://upic.gov.in/MediaGallery/s32024.JPG">Shree Girjesh Kumar Chaudhary</a></p>
+                                </div>
+                                <div>
+                                    <img src="https://upic.gov.in/MediaGallery/s42024.JPG" alt="" width="70">
+                                    <p><a href="https://upic.gov.in/MediaGallery/s42024.JPG">Shree Dilip Kumar Agnihotri</a></p>
+                                </div>
+                                <div>
+                                    <img src="https://upic.gov.in/MediaGallery/s52024.JPG" alt="" width="70">
+                                    <p><a href="https://upic.gov.in/MediaGallery/s52024.JPG">Shree Padum Narayan Dwivdei</a></p>
+                                </div>
+                                <div>
+                                    <img src="https://upic.gov.in/MediaGallery/s62024.JPG" alt="" width="70">
+                                    <p><a href="https://upic.gov.in/MediaGallery/s62024.JPG">Shri Swatantra Prakash</a></p>
+                                </div>
+                                <div>
+                                    <img src="https://upic.gov.in/MediaGallery/s72024.JPG" alt="" width="70">
+                                    <p><a href="https://upic.gov.in/MediaGallery/s72024.JPG">Shri Mohammad Nadeem</a></p>
+                                </div>
+                                <div>
+                                    <img src="https://upic.gov.in/MediaGallery/s82024.JPG" alt="" width="70">
+                                    <p><a href="https://upic.gov.in/MediaGallery/s82024.JPG">Shri Rajendra Singh</a></p>
+                                </div>
+                                <div>
+                                    <img src="https://upic.gov.in/MediaGallery/s92024.JPG" alt="" width="70">
+                                    <p><a href="https://upic.gov.in/MediaGallery/s92024.JPG">Smt. Shakuntala Gautam</a></p>
+                                </div>
+                                <div>
+                                    <img src="https://upic.gov.in/MediaGallery/s102024.JPG" alt="" width="70">
+                                    <p><a href="https://upic.gov.in/MediaGallery/s102024.JPG">Shri Rakesh Kumar</a></p>
+                                </div>
+                                <div>
+                                    <img src="https://upic.gov.in/MediaGallery/s112024.JPG" alt="" width="70">
+                                    <p><a href="https://upic.gov.in/MediaGallery/s112024.JPG">Shri Virendra Pratap Singh</a></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="scicHead">
-                    <h4>State Chief Information Commissioner</h4><br>
-                    <img src="https://upic.gov.in/MediaGallery/s12024.JPG" alt="" width="100"><br><br>
-                    <h6><a href="https://upic.gov.in/MediaGallery/s12024.JPG">Shri Rajkumar Vishwakarma</a></h6>
-                </div>
-                <div id="sicDetail">
-                    <div id="sic">
-                        <h5>State Information Commissioner</h5>
-                    </div>
-                    <div id="sicTen">
-                        <div>
-                            <img src="https://upic.gov.in/MediaGallery/s22024.JPG" alt="" width="70">
-                            <p><a href="https://upic.gov.in/MediaGallery/s22024.JPG">Shree Sudhir Kumar Singh</a></p>
-                        </div>
-                        <div>
-                            <img src="https://upic.gov.in/MediaGallery/s32024.JPG" alt="" width="70">
-                            <p><a href="https://upic.gov.in/MediaGallery/s32024.JPG">Shree Girjesh Kumar Chaudhary</a></p>
-                        </div>
-                        <div>
-                            <img src="https://upic.gov.in/MediaGallery/s42024.JPG" alt="" width="70">
-                            <p><a href="https://upic.gov.in/MediaGallery/s42024.JPG">Shree Dilip Kumar Agnihotri</a></p>
-                        </div>
-                        <div>
-                            <img src="https://upic.gov.in/MediaGallery/s52024.JPG" alt="" width="70">
-                            <p><a href="https://upic.gov.in/MediaGallery/s52024.JPG">Shree Padum Narayan Dwivdei</a></p>
-                        </div>
-                        <div>
-                            <img src="https://upic.gov.in/MediaGallery/s62024.JPG" alt="" width="70">
-                            <p><a href="https://upic.gov.in/MediaGallery/s62024.JPG">Shri Swatantra Prakash</a></p>
-                        </div>
-                        <div>
-                            <img src="https://upic.gov.in/MediaGallery/s72024.JPG" alt="" width="70">
-                            <p><a href="https://upic.gov.in/MediaGallery/s72024.JPG">Shri Mohammad Nadeem</a></p>
-                        </div>
-                        <div>
-                            <img src="https://upic.gov.in/MediaGallery/s82024.JPG" alt="" width="70">
-                            <p><a href="https://upic.gov.in/MediaGallery/s82024.JPG">Shri Rajendra Singh</a></p>
-                        </div>
-                        <div>
-                            <img src="https://upic.gov.in/MediaGallery/s92024.JPG" alt="" width="70">
-                            <p><a href="https://upic.gov.in/MediaGallery/s92024.JPG">Smt. Shakuntala Gautam</a></p>
-                        </div>
-                        <div>
-                            <img src="https://upic.gov.in/MediaGallery/s102024.JPG" alt="" width="70">
-                            <p><a href="https://upic.gov.in/MediaGallery/s102024.JPG">Shri Rakesh Kumar</a></p>
-                        </div>
-                        <div>
-                            <img src="https://upic.gov.in/MediaGallery/s112024.JPG" alt="" width="70">
-                            <p><a href="https://upic.gov.in/MediaGallery/s112024.JPG">Shri Virendra Pratap Singh</a></p>
-                        </div>
-                    </div>
-                </div>
+
+                <!-- Important Activities in UPIC -->
                 <div id="impUpic">
                     <div>
                         <div>
@@ -192,12 +218,34 @@
                         <div>
                         </div>
                     </div>
-                    <div>
-
-                    </div>
-
+                    <div class="container">
+                        <div class="scroll-wrapper" id="scrollContent">
+                            <div class="notice">
+                                <p><strong>आयोग में मुख्य सतर्कता अधिकारी और सतर्कता अधिकारी का मनोनयन</strong></p>
+                                <p class="date">Date: 15/07/2021</p>
+                                <a href="#" class="download">Download PDF (738 KB)</a>
+                            </div>
+                            <div class="notice">
+                                <p><strong>प्रतिलिपि से संबंधित कार्यालय आदेश</strong></p>
+                                <p class="date">Date: 14/12/2021</p>
+                                <a href="#" class="download">Download PDF (582 KB)</a>
+                            </div>
+                            <div class="notice">
+                                <p><strong>कार्यालय आदेश दिनांक 18/02/2022 (पत्रांक :20/ सचिव कैम्प सू. आ. / 2022 )</strong></p>
+                                <p class="date">Date: 18/02/2022</p>
+                                <a href="#" class="download">Download PDF (772 KB)</a>
+                            </div>
+                            <div class="notice">
+                                <p><strong>परिपत्र पत्रांक 196 /नि०स० /रा ० मु ० सू ० आ ० / 2022 दिनांकित 10 जून , 2022</strong></p>
+                                <p class="date">Date: 17/06/2022</p>
+                                <a href="#" class="download">Download PDF (2 MB)</a>
+                            </div>
+                        </div>
+                    </div>                                
                 </div>
             </div>
+
+            <!-- Right side Content Section -->
             <div id="rightSide">
                 <div>
                     <div class="blue">
@@ -242,14 +290,15 @@
                     <button>Importance Office Orders</button> -->
                 </div>
                 <div id="img1">
-                    <img src="https://upic.gov.in/images/case.gif" alt="" width="250">
+                    <img src="https://upic.gov.in/images/case.gif" alt="" width="">
                 </div>
                 <div id="img2">
-                    <img src="https://upic.gov.in/DynamicPages/Download.aspx" alt="">
-                    <img src="https://upic.gov.in/images/download.jpg" alt="" width="250">
+                    <p></p>
+                    <img src="https://upic.gov.in/images/download.jpg" alt="" width="">
                 </div>
             </div>
-        </div>
+        </div>             
+        <!-- Gov Link -->
         <div id="govtLink">
             <div>
                 <img src="https://upic.gov.in/images/indiaGov.gif" alt="">
@@ -270,6 +319,8 @@
                 <img src="https://upic.gov.in/images/cm_office.gif" alt="">
             </div>
         </div>
+
+        <!-- footer -->
         <div id="footer">
             <div>
                 <p>Accessibility Statement | Privacy Policy | Hyper Linking Policy | Copyright Policy | Terms and
@@ -278,7 +329,7 @@
                 <p>For any query regarding this website, please contact the “Web Information Manager”. </p>
                 <p> © Uttar Pradesh Information Commission, U.P., India | All rights reserved. </p>
             </div>
-            <div>
+            <div class="footer_img">
                 <p> You are Visitor No. : 477034 </p>
                 <p> Last reviewed and updated on : 15-03-2024 </p>
                 <img src="http://www.w3.org/Icons/valid-xhtml10" alt="">
@@ -288,24 +339,33 @@
     </div>
     </div>
     <script>
+        function changeLanguageToHindi() {
+            alert("Hindi language selected");
+        }
+    </script>
+    <script>
+        let scrollContent = document.getElementById("scrollContent");
+        let clone = scrollContent.cloneNode(true);
+        scrollContent.appendChild(clone);
 
-        var slideIndex = 1;
+    </script>
+    <script>
+        let slideIndex = 1;
         showDivs(slideIndex);
 
         function plusDivs(n) {
             showDivs(slideIndex += n);
         }
-
         function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = x.length };
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
-            x[slideIndex - 1].style.display = "block";
+            slides[slideIndex - 1].style.display = "block";
         }
+
     </script>
     <script>
         function updateDateTime() {
@@ -336,8 +396,5 @@
         // Initial call to display datetime
         updateDateTime();
     </script>
-
-
 </body>
-
 </html>
