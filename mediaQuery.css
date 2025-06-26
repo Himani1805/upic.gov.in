@@ -1,5 +1,5 @@
-/* Extra Small Devices (Phones) */
-@media only screen and (max-width: 480px) {
+/* Small Phones and Landscape Phones (max-width: 568px) */
+@media only screen and (max-width: 568px) {
     #root {
         width: 100%;
     }
@@ -8,19 +8,16 @@
         align-items: center;
         padding: 5px;
         text-align: center;
-
     }
     .bgImg {
         width: 100%;
         background-size: contain;
         justify-content: center;
-
     }
     #headerBanner, #bannerLeft {
         flex-direction: column;
         gap: 5px;
         text-align: center;
-
     }
     #navBar {
         flex-direction: column;
@@ -28,52 +25,49 @@
         gap: 5px;
         padding: 5px;
         text-align: center;
-
-    }
-    #navBar a:hover{
-        background-color: skyblue;
     }
     #main {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-
     }
-    #leftSide,
+    #leftSide, #midSection, #rightSide {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+        float: none !important;
+        position: static !important;
+        clear: both !important;
+    }
     #rightSide {
-        width: 100%;
-        padding: 5px;
-        padding: 10px;
-        text-align: center;
-        box-sizing: border-box;
-
-    }
-    #midSection {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        box-sizing: border-box;
+        margin-top: 0;
     }
     #footer {
         flex-direction: column;
         height: auto;
         text-align: center;
         padding: 10px;
-
     }
     #scroll {
         width: 100%;
-        overflow-x: scroll; 
+        overflow-x: auto;
         white-space: nowrap;
     }
     #govtLink {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 5px;
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
     #govtLink img {
-        width: 30px;
-        /* height: auto; */
+        width: 140px !important;
+        min-width: 100px !important;
+        height: auto !important;
+        max-width: none !important;
+        display: block !important;
+        margin: 8px !important;
     }
     #impUpic{
         width: 100%;
@@ -82,17 +76,15 @@
         box-sizing: border-box;
     }
     .blue, .green {
-        padding: 8px 15px;
-        font-size: 14px;
+        padding: 8px 10px;
+        font-size: 13px;
     }
-
-    #footer {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-        text-align: center;
+    body, * {
+        font-size: 14px !important;
     }
-
+    #leftSide { order: 1; }
+    #midSection { order: 2; }
+    #rightSide { order: 3; }
 }
 
 /* Small Devices (Tablets) */
@@ -110,11 +102,9 @@
         width: 100%;
         background-size: contain;
         justify-content: center;
-
     }
     #navBar {
         flex-wrap: wrap;
-        justify-content: center;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -122,40 +112,26 @@
         padding: 10px;
     }
     #main {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-
     }
-    #midSection {
-        width: 100%;
-        margin: 0;
-        padding: 15px;
-        text-align: center;
-        box-sizing: border-box;
-
+    #leftSide, #midSection, #rightSide {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+        float: none !important;
+        position: static !important;
+        clear: both !important;
     }
-    /* .bgImg {
-        width: 100%;
-    }
-     */
-    
-    #leftSide,
     #rightSide {
-        width: 90%;
-        padding: 10px;
-        text-align: center;
-        padding: 15px;
-        text-align: center;
-        box-sizing: border-box;
-
+        margin-top: 0;
     }
-    
     #sicTen {
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
-
     }
     #scroll {
         width: 100%;
@@ -170,13 +146,20 @@
         text-align: center;
     }
     #govtLink img {
-        width: 60px;
+        width: 260px !important;
+        min-width: 80px;
+        max-width: none !important;
         height: auto;
+        display: inline-block;
     }
     .footer_img img{
-        width: fit-content;
+        width: 320px !important;
+        max-width: none !important;
+        height: auto;
     }
-
+    #leftSide { order: 1; }
+    #midSection { order: 2; }
+    #rightSide { order: 3; }
 }
 
 /* Medium Devices (Laptops) */
@@ -197,7 +180,6 @@
     }
     #navBar {
         flex-wrap: wrap;
-        /* justify-content: center; */
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -206,22 +188,24 @@
         justify-content: flex-start;
     }
     #main {
-        flex-direction: column;
-        align-items: center;
         display: flex;
+        flex-direction: column;
+        align-items: stretch;
     }
     #leftSide, #midSection, #rightSide {
-        width: 100%;
+        width: 100% !important;
         padding: 15px;
         text-align: center;
         box-sizing: border-box;
+        margin: 0;
     }
-
+    #midSection {
+        margin-bottom: 20px;
+    }
     #sicTen {
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
     }
     #scroll {
         width: 100%;
@@ -229,19 +213,28 @@
         white-space: nowrap;
     }
     #govtLink {
-        gap: 10px;
-        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         gap: 20px;
     }
+    #govtLink > div {
+        width: auto;
+        margin: 10px 0;
+    }
     #govtLink img {
-        width: 100px;
+        width: 260px !important;
+        max-width: none !important;
         height: auto;
+        display: inline-block;
     }
     .footer_img img{
-        width: 50px;
+        width: 320px !important;
+        max-width: none !important;
+        height: auto;
     }
-} 
-
+}
 
 /* Large Devices (Desktops) */
 @media only screen and (min-width: 1025px) {
@@ -260,12 +253,42 @@
     }
     #govtLink {
         display: flex;
-        justify-content: space-evenly;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
         gap: 20px;
     }
+    #govtLink > div {
+        width: auto;
+        margin: 10px 0;
+    }
     #govtLink img {
-        /* width: 140px; */
+        width: 200px !important;
+        max-width: none !important;
         height: auto;
     }
 }
+
+.footer_img{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+
+}
+
+.footer_img div{
+    display: flex;
+    /* align-items: center;
+    overflow: hidden; */
+}
+.footer_img div img {
+    /* margin: 0 auto; */
+    max-width: 60px;
+    margin-top: 5px;
+    
+
+    /* height: auto;
+    object-fit: contain; */
+}
+

@@ -8,6 +8,7 @@
     width: 96%;
     margin: auto;
     border: 1px solid #ccc;
+    
 }
 #header{
     display: flex;
@@ -25,6 +26,9 @@
 #header div{
     font-size: 12px;
 }
+#header a:hover{
+    text-decoration: underline;
+}
 .bgImg{
     width: 40%;
     padding: 5px 0px;
@@ -38,7 +42,6 @@
     color: gray;
 
 }
-
 #headerBanner{
     display: flex;
     justify-content: space-between;
@@ -51,14 +54,24 @@
     align-items: center;
     gap: 20px;
 }
+#bannerLeft img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding:3px;
+    margin-left: 20px;
+    background: white;
+    transition: transform 0.3s ease;
+}
+#bannerLeft img:hover {
+    transform: scale(1.05);
+}
 #header a{
     text-decoration: none;
     color: gray;
     font-size: 12px;
 
-}
-#header a:hover{
-    text-decoration: underline;
 }
 #navBar a{
     text-decoration: none;
@@ -97,21 +110,41 @@
     padding: 20px;
     justify-content:left;
     align-items: center;
-    gap: 30px;
+    gap: 0;
+    font-weight: 700;
 }
+/* #navBar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+} */
+
 #navBar li {
     list-style-type: none;
 
 }
-#navBar a{
+#navBar a {
     color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: block;
+}
 
+#navBar a:hover, #navBar .active {
+    background-color: #00baff; /* Bright blue */
+    color: white;
 }
 #Gallery{
     background-color: #1B76A3;
     color: white;
     border: none;
     width: 70px;
+    font-weight: 700;
 }
 #main{
     display: flex;
@@ -387,15 +420,188 @@ h2 {
 }
 #footer{
     display: flex;
-    height: 150px;
+    height: 100px;
     color: white;
     background-color: #07457C;
     background-image: url("https://upic.gov.in/images/bg1.gif");
-    padding: 20px;
+    padding: 20px 0px;
     justify-content: space-around;
-    line-height: 30px;
-    font-size: 4px;
+    line-height: 25px;
+    font-size: 0.2em;
+    border-top: 3px solid #2091e2;
+}
+
+.login-header {
+    max-width: 350px;
+    text-align: center;
+    margin: 20px auto;
+    color: #3ca0e7;
+    text-wrap: wrap;
+}
+
+.login-header img {
+    margin-bottom: 15px;
+}
+
+.login-header h1 a{
+    font-size: 26px;
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 35px;
+    text-decoration: none;
+    
+}
+
+.login-header h1 a:hover{
+    text-decoration:underline;
+    text-decoration-color: #3ca0e7;
+}
+
+.login-container {
+    background: #f7f7f7;
+    max-width: 320px;
+    margin: 20px auto;
+    padding: 25px 35px 2px 35px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 5px solid #384457;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #3ca0e7;
+    border-bottom: 2px solid #e6eaed;
+}
+
+.coffee-icon {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
 
 }
+
+.informationText{
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 30px 10px 12px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.input-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.captcha-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 15px 0;
+}
+
+.captcha-box {
+    flex: 1;
+    background: #fff;
+    /* border: 1px solid #ccc; */
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.captcha-text {
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    color: #000;
+    filter: blur(0.7px);
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+}
+
+.refresh-captcha {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.refresh-captcha:hover {
+    background: #f0f0f0;
+}
+
+.login-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.remember-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.remember-group input[type="checkbox"] {
+    margin: 0;
+}
+
+.remember-group label {
+    color: #333;
+    font-size: 14px;
+}
+
+.login-btn {
+    width: 100px;
+    padding: 8px;
+    background: #2192CA;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #1a7ba8;
+}
+
+.forgot-password {
+    margin-top: 18px;
+}
+.forgot-password a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    background: #5090c0;
+    padding: 2px 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    border: none;
+    text-align: center;
+    box-sizing: border-box;
+}
+.forgot-password a:hover {
+    background: #386b8c;
+}
+
 
 

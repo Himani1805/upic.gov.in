@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Uttar Pradesh Information Commission</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQuery.css">
+</head>
+<body style="background:#232528;">
+    <!-- Title Section -->
+    <div class="login-header">
+        <img src="up-logo-e.jpg" alt="UPIC Logo" width="100">
+        <h1><a href="index.html" style="color: #3ca0e7; ">Uttar Pradesh Information Commission</a></h1>
+    </div>
+
+    <!-- Login Form Section -->
+    <div class="login-container">
+        <form class="login-form">
+            <div class="form-header">
+                <span class="coffee-icon">☕</span>
+                <span class="informationText">Please Enter Your Information</span>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" placeholder="UserName" required>
+                <span class="input-icon">👤</span>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" placeholder="Password" required>
+                <span class="input-icon">🔒</span>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" placeholder="Type the text" required>
+            </div>
+            
+            <div class="captcha-container">
+                <div class="captcha-box">
+                    <span class="captcha-text" id="captcha-text">C 2 6 $</span>
+                </div>
+                <button type="button" class="refresh-captcha" id="refresh-captcha-btn">
+                    <img src="https://fonts.gstatic.com/s/i/materialicons/refresh/v6/24px.svg" alt="refresh" width="20">
+                </button>
+            </div>
+            
+            <div class="login-actions">
+                <div class="remember-group">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </div>
+            <div id="login-message" style="margin-top:10px;text-align:center;"></div>
+        </form>
+        <div class="forgot-password">
+            <a href="#" id="forgot-link">I forgot my password</a>
+        </div>
+    </div>
+    <div id="forgot-message" style="margin-top:10px;text-align:center;color:#1376cd;"></div>
+    <script>
+        // Demo login functionality
+        document.querySelector('.login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var username = document.querySelector('input[placeholder="UserName"]').value.trim();
+            var password = document.querySelector('input[placeholder="Password"]').value.trim();
+            var messageDiv = document.getElementById('login-message');
+            if (username && password) {
+                messageDiv.style.color = 'green';
+                messageDiv.textContent = 'Login successful!';
+            } else {
+                messageDiv.style.color = 'red';
+                messageDiv.textContent = 'Please enter username and password.';
+            }
+        });
+        // Captcha refresh functionality
+        function randomCaptcha() {
+            const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+            let result = '';
+            for (let i = 0; i < 5; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length)) + ' ';
+            }
+            return result.trim();
+        }
+        document.getElementById('refresh-captcha-btn').addEventListener('click', function() {
+            document.getElementById('captcha-text').textContent = randomCaptcha();
+        });
+        // Initialize captcha on page load
+        document.getElementById('captcha-text').textContent = randomCaptcha();
+        // Forgot password functionality
+        document.getElementById('forgot-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('forgot-message').textContent = 'Password reset link sent to your email!';
+        });
+    </script>
+</body>
+</html> 
